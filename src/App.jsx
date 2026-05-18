@@ -3,7 +3,7 @@ import Root from './layout/Root'
 
 const App = () => {
   return (
-    <div>
+    <div className='font-poppins'>
       <Root/>
     </div>
   )

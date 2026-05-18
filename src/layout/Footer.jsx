@@ -1,233 +1,199 @@
-import React from "react";
+import Logo from "/logo/logo.png";
+import {
+  RiFacebookFill,
+  RiInstagramLine,
+  RiTwitterXLine,
+  RiPinterestLine,
+  RiVisaLine,
+  RiMastercardLine,
+  RiPaypalLine,
+  RiAppleFill,
+} from "react-icons/ri";
 
 const Footer = () => {
+  const shopLinks = [
+    "Women",
+    "Men",
+    "Accessories",
+    "Footwear",
+    "New Arrivals",
+    "Sale",
+  ];
+
+  const helpLinks = [
+    "Customer Service",
+    "My Account",
+    "Find a Store",
+    "Shipping & Returns",
+    "FAQs",
+  ];
+
+  const aboutLinks = [
+    "About Us",
+    "Sustainability",
+    "Careers",
+    "Press",
+    "Contact Us",
+  ];
+
+  const socialLinks = [
+    {
+      icon: <RiFacebookFill className="h-[18px] w-[18px]" />,
+      href: "#",
+    },
+    {
+      icon: <RiInstagramLine className="h-[18px] w-[18px]" />,
+      href: "#",
+    },
+    {
+      icon: <RiTwitterXLine className="h-[18px] w-[18px]" />,
+      href: "#",
+    },
+    {
+      icon: <RiPinterestLine className="h-[18px] w-[18px]" />,
+      href: "#",
+    },
+  ];
+
+  const paymentIcons = [
+    <RiVisaLine className="h-7 w-7" />,
+    <RiMastercardLine className="h-7 w-7" />,
+    <RiPaypalLine className="h-7 w-7" />,
+    <RiAppleFill className="h-7 w-7" />,
+  ];
+
   return (
-    <div>
-      <footer className="bg-white border-t border-gray-100 pt-16 pb-8">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {/* Column 1: About */}
-            <div className="lg:col-span-2">
-              <a
-                href="#"
-                className="font-['Pacifico'] text-2xl text-primary inline-block mb-4"
-              >
-                logo
-              </a>
-              <p className="text-gray-600 mb-6 max-w-md">
-                We offer premium quality clothing and accessories for men and
-                women. Our mission is to provide sustainable fashion that lasts.
-              </p>
-              <div className="flex space-x-4">
+    <footer className="border-t border-slate-200/80 bg-white">
+      {/* MAIN */}
+      <div className="container-section py-14 sm:py-16 lg:py-20">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10 xl:gap-14">
+          {/* BRAND */}
+          <div className="lg:col-span-4">
+            <a href="#" className="inline-flex shrink-0 items-center">
+              <img
+                src={Logo}
+                alt="Logo"
+                className="h-9 w-auto object-contain sm:h-10"
+              />
+            </a>
+
+            <p className="mt-5 max-w-md text-sm leading-7 text-slate-600 sm:text-[15px]">
+              We create premium fashion essentials designed for comfort,
+              sustainability, and modern everyday style.
+            </p>
+
+            {/* SOCIAL */}
+            <div className="mt-7 flex items-center gap-3">
+              {socialLinks.map((item, index) => (
                 <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors"
+                  key={index}
+                  href={item.href}
+                  className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 hover:shadow-lg hover:shadow-indigo-100/60"
                 >
-                  <i className="ri-facebook-fill" />
+                  {item.icon}
                 </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors"
-                >
-                  <i className="ri-instagram-line" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors"
-                >
-                  <i className="ri-twitter-x-line" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition-colors"
-                >
-                  <i className="ri-pinterest-line" />
-                </a>
-              </div>
-            </div>
-            {/* Column 2: Shop */}
-            <div>
-              <h3 className="text-gray-900 font-semibold mb-4">Shop</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Women
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Men
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Accessories
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Footwear
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    New Arrivals
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Sale
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Column 3: Help */}
-            <div>
-              <h3 className="text-gray-900 font-semibold mb-4">Help</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Customer Service
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    My Account
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Find a Store
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Shipping &amp; Returns
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    FAQs
-                  </a>
-                </li>
-              </ul>
-            </div>
-            {/* Column 4: About */}
-            <div>
-              <h3 className="text-gray-900 font-semibold mb-4">About</h3>
-              <ul className="space-y-3">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Sustainability
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Careers
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Press
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-600 hover:text-primary transition-colors"
-                  >
-                    Contact Us
-                  </a>
-                </li>
-              </ul>
+              ))}
             </div>
           </div>
-          <div className="mt-12 pt-8 border-t border-gray-100">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-500 text-sm mb-4 md:mb-0">
-                © 2025 ShopEase. All rights reserved.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a
-                  href="#"
-                  className="text-gray-500 text-sm hover:text-gray-700"
-                >
-                  Privacy Policy
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-500 text-sm hover:text-gray-700"
-                >
-                  Terms of Service
-                </a>
-                <a
-                  href="#"
-                  className="text-gray-500 text-sm hover:text-gray-700"
-                >
-                  Cookies Settings
-                </a>
-              </div>
-              <div className="flex items-center space-x-3 mt-4 md:mt-0">
-                <i className="ri-visa-fill text-2xl text-gray-600" />
-                <i className="ri-mastercard-fill text-2xl text-gray-600" />
-                <i className="ri-paypal-fill text-2xl text-gray-600" />
-                <i className="ri-apple-fill text-2xl text-gray-600" />
-              </div>
+
+          {/* LINKS WRAPPER */}
+          <div className="grid grid-cols-2 gap-10 sm:gap-12 lg:col-span-8 lg:grid-cols-3">
+            {/* SHOP */}
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
+                Shop
+              </h3>
+
+              <ul className="mt-5 space-y-4">
+                {shopLinks.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-indigo-600"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* HELP */}
+            <div>
+              <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
+                Help
+              </h3>
+
+              <ul className="mt-5 space-y-4">
+                {helpLinks.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-indigo-600"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* ABOUT */}
+            <div className="sm:col-span-2 lg:col-span-1">
+              <h3 className="text-sm font-bold uppercase tracking-wide text-slate-900">
+                About
+              </h3>
+
+              <ul className="mt-5 space-y-4">
+                {aboutLinks.map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-sm font-medium text-slate-600 transition-colors duration-200 hover:text-indigo-600"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
+
+        {/* BOTTOM */}
+        <div className="mt-14 flex flex-col gap-6 border-t border-slate-200 pt-7 sm:mt-16 lg:flex-row lg:items-center lg:justify-between">
+          {/* COPYRIGHT */}
+          <p className="text-center text-sm font-medium text-slate-500 lg:text-left">
+            © {new Date().getFullYear()} Barakah-Bazaar. All rights reserved.
+          </p>
+
+          {/* POLICIES */}
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2">
+            {["Privacy Policy", "Terms of Service", "Cookies"].map((item) => (
+              <a
+                key={item}
+                href="#"
+                className="text-sm font-medium text-slate-500 transition-colors duration-200 hover:text-slate-900"
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+
+          {/* PAYMENTS */}
+          <div className="flex items-center justify-center gap-3 text-slate-500 lg:justify-end">
+            {paymentIcons.map((icon, index) => (
+              <div
+                key={index}
+                className="flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-slate-50"
+              >
+                {icon}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
