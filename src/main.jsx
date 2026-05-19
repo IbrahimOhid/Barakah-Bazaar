@@ -1,15 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
-
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-import Root from "./layout/Root.jsx";
-import Home from "./page/Home/Home.jsx";
+import "./index.css";
 
+// LAYOUT
+import Root from "./layout/Root.jsx";
+
+// PAGES
+import Home from "./page/Home/Home.jsx";
+import About from "./page/About/About.jsx";
+
+// ROUTER
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,10 +24,15 @@ const router = createBrowserRouter([
         index: true,
         element: <Home />,
       },
+      {
+        path: "about",
+        element: <About />,
+      },
     ],
   },
 ]);
 
+// RENDER
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />

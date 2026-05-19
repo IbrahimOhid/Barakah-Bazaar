@@ -5,20 +5,35 @@ import { IoIosSearch } from "react-icons/io";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2";
 import { RiAccountPinCircleLine } from "react-icons/ri";
-
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [shopMenu, setShopMenu] = useState(false);
 
-  const navItem = ["New Arrivals", "Sale", "About"];
+  const navItem = [
+    {
+      id: 1,
+      item: "New Arrivals",
+      path: "/new-arrivals",
+    },
+    {
+      id: 2,
+      item: "Sale",
+      path: "/sale",
+    },
+    {
+      id: 3,
+      item: "About",
+      path: "/about",
+    },
+  ];
   const shopItem = ["Women", "Men", "Accessories", "Footwear"];
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white backdrop-blur-xl ">
       {/* CONTAINER */}
       <div className="container-section flex h-[68px]  items-center justify-between  ">
-        
         {/* LEFT SIDE */}
         <div className="flex items-center gap-8 xl:gap-12">
           {/* LOGO */}
@@ -32,18 +47,16 @@ const Navbar = () => {
 
           {/* DESKTOP NAVIGATION */}
           <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
-            <a
-              href="#"
+            <NavLink to={"/"}
               className="relative text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:text-indigo-600"
             >
               Home
-            </a>
+            </NavLink>
 
             {/* SHOP DROPDOWN */}
             <div className="group relative">
               <button className="flex items-center gap-1 text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:text-indigo-600">
                 Shop
-
                 <MdKeyboardArrowDown className="h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
               </button>
 
@@ -61,21 +74,20 @@ const Navbar = () => {
               </div>
             </div>
 
-            {navItem.map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:text-indigo-600"
+            {navItem.map((nav) => (
+              <NavLink
+                key={nav.id}
+                to={nav.path}
+                className="text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors duration-300"
               >
-                {item}
-              </a>
+                {nav.item}
+              </NavLink>
             ))}
           </nav>
         </div>
 
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
-          
           {/* SEARCH */}
           <div className="hidden md:flex h-11 items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50/80 px-4 transition-all duration-300 focus-within:border-indigo-500 focus-within:bg-white focus-within:shadow-lg focus-within:shadow-indigo-100/60 lg:w-[240px] xl:w-[280px]">
             <IoIosSearch className="h-5 w-5 shrink-0 text-slate-400" />
@@ -101,7 +113,6 @@ const Navbar = () => {
             <RiAccountPinCircleLine className="h-[21px] w-[21px]" />
           </button>
 
-
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setMobileMenu(!mobileMenu)}
@@ -123,7 +134,6 @@ const Navbar = () => {
         }`}
       >
         <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6">
-          
           {/* MOBILE SEARCH */}
           <div className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3">
             <IoIosSearch className="h-5 w-5 shrink-0 text-slate-400" />
@@ -137,12 +147,11 @@ const Navbar = () => {
 
           {/* MOBILE NAVIGATION */}
           <div className="mt-5 space-y-1">
-            <a
-              href="#"
+            <NavLink to={"/"}
               className="flex items-center rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-200 hover:bg-slate-100"
             >
               Home
-            </a>
+            </NavLink>
 
             {/* MOBILE SHOP */}
             <div className="rounded-2xl border border-slate-200">
@@ -151,7 +160,6 @@ const Navbar = () => {
                 className="flex w-full items-center justify-between px-4 py-3 text-sm font-semibold text-slate-700"
               >
                 Shop
-
                 <MdKeyboardArrowDown
                   className={`h-5 w-5 transition-transform duration-300 ${
                     shopMenu ? "rotate-180" : ""
@@ -178,14 +186,14 @@ const Navbar = () => {
               </div>
             </div>
 
-            {navItem.map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="flex items-center rounded-2xl px-4 py-3 text-sm font-semibold text-slate-700 transition-all duration-200 hover:bg-slate-100"
+            {navItem.map((nav) => (
+              <NavLink
+                key={nav.id}
+                to={nav.path}
+                className="text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors duration-300"
               >
-                {item}
-              </a>
+                {nav.item}
+              </NavLink>
             ))}
           </div>
 
