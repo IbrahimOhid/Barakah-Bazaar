@@ -63,9 +63,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="border-t border-slate-200/80 bg-white">
+    <footer className=" bg-white">
       {/* MAIN */}
-      <div className="container-section py-14 sm:py-16 lg:py-20">
+      <div className="container-section ">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10 xl:gap-14">
           {/* BRAND */}
           <div className="lg:col-span-4">

@@ -1,9 +1,10 @@
-import React from "react";
+
 import {
   HiArrowRight,
   HiOutlineArrowLongRight,
 } from "react-icons/hi2";
-import { offerData } from "../../data/offerData";
+import { offerProductData } from "../../data/productData";
+import ShopButton from "../Button/ShopButton";
 
 
 
@@ -14,7 +15,7 @@ const Offer = () => {
 
         {/* OFFER GRID */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          {offerData && offerData.map((offer) => (
+          {offerProductData && offerProductData.map((offer) => (
             <div
               key={offer.id}
               className="group relative overflow-hidden rounded-[28px] border border-slate-200/70 bg-slate-100 shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_60px_-15px_rgba(15,23,42,0.18)]"
@@ -35,7 +36,7 @@ const Offer = () => {
                 {/* CONTENT */}
                 <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 p-5 sm:p-6">
                   <div className="space-y-1">
-                    <p className="text-sm font-medium text-white/80">
+                    <p className="text-sm font-medium text-white/90">
                       Premium Collection
                     </p>
 
@@ -48,12 +49,6 @@ const Offer = () => {
                     </p>
                   </div>
 
-                  {/* BUTTON */}
-                  <button className="group/button inline-flex h-11 w-fit items-center gap-2 rounded-2xl bg-white px-5 text-sm font-semibold text-slate-900 transition-all duration-300 hover:bg-indigo-600 hover:text-white active:scale-[0.98]">
-                    Shop Now
-
-                    <HiArrowRight className="h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1" />
-                  </button>
                 </div>
               </div>
             </div>

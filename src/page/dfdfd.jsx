@@ -1,141 +1,6 @@
 
   
-  {/* New Arrivals */}
-  <section className="py-16">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl font-bold text-center mb-12">New Arrivals</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {/* Product 1 */}
-        <div className="group">
-          <div className="relative overflow-hidden rounded-lg mb-4">
-            <span className="absolute top-3 left-3 bg-primary text-white text-xs px-2 py-1 rounded">
-              New
-            </span>
-            <img
-              src="https://readdy.ai/api/search-image?query=elegant%20silk%20scarf%20on%20minimal%20light%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20detailed%20fabric%20texture&width=500&height=600&seq=prod8&orientation=portrait"
-              alt="Silk Scarf"
-              className="w-full h-80 object-cover object-top"
-            />
-            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <button className="bg-white text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-gray-100 transition">
-                <i className="ri-eye-line" />
-              </button>
-              <button className="bg-white text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-gray-100 transition">
-                <i className="ri-heart-line" />
-              </button>
-              <button className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-primary/90 transition">
-                <i className="ri-shopping-bag-line" />
-              </button>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-medium text-gray-900 mb-1">
-              Luxury Silk Scarf
-            </h3>
-            <div className="flex items-center mb-1">
-              <div className="flex text-amber-400 text-sm">
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-line" />
-              </div>
-              <span className="text-xs text-gray-500 ml-1">(12)</span>
-            </div>
-            <p className="text-gray-900 font-medium">$39.99</p>
-          </div>
-        </div>
-        {/* Product 2 */}
-        <div className="group">
-          <div className="relative overflow-hidden rounded-lg mb-4">
-            <span className="absolute top-3 left-3 bg-primary text-white text-xs px-2 py-1 rounded">
-              New
-            </span>
-            <img
-              src="https://readdy.ai/api/search-image?query=premium%20leather%20handbag%20on%20minimal%20light%20background%2C%20professional%20fashion%20photography%2C%20high%20quality%20product%20image%2C%20detailed%20leather%20texture&width=500&height=600&seq=prod9&orientation=portrait"
-              alt="Leather Handbag"
-              className="w-full h-80 object-cover object-top"
-            />
-            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <button className="bg-white text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-gray-100 transition">
-                <i className="ri-eye-line" />
-              </button>
-              <button className="bg-white text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-gray-100 transition">
-                <i className="ri-heart-line" />
-              </button>
-              <button className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-primary/90 transition">
-                <i className="ri-shopping-bag-line" />
-              </button>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-medium text-gray-900 mb-1">
-              Designer Leather Handbag
-            </h3>
-            <div className="flex items-center mb-1">
-              <div className="flex text-amber-400 text-sm">
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-half-fill" />
-              </div>
-              <span className="text-xs text-gray-500 ml-1">(8)</span>
-            </div>
-            <p className="text-gray-900 font-medium">$149.99</p>
-          </div>
-        </div>
-        {/* Product 3 */}
-        <div className="group">
-          <div className="relative overflow-hidden rounded-lg mb-4">
-            <span className="absolute top-3 left-3 bg-primary text-white text-xs px-2 py-1 rounded">
-              New
-            </span>
-            <img
-              src="https://readdy.ai/api/search-image?query=stylish%20sunglasses%20on%20minimal%20light%20background%2C%20professional%20product%20photography%2C%20high%20quality%20image%2C%20detailed%20texture&width=500&height=600&seq=prod10&orientation=portrait"
-              alt="Sunglasses"
-              className="w-full h-80 object-cover object-top"
-            />
-            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <button className="bg-white text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-gray-100 transition">
-                <i className="ri-eye-line" />
-              </button>
-              <button className="bg-white text-gray-900 w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-gray-100 transition">
-                <i className="ri-heart-line" />
-              </button>
-              <button className="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center shadow-md mx-1 hover:bg-primary/90 transition">
-                <i className="ri-shopping-bag-line" />
-              </button>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-medium text-gray-900 mb-1">
-              Premium Sunglasses
-            </h3>
-            <div className="flex items-center mb-1">
-              <div className="flex text-amber-400 text-sm">
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-fill" />
-                <i className="ri-star-line" />
-              </div>
-              <span className="text-xs text-gray-500 ml-1">(6)</span>
-            </div>
-            <p className="text-gray-900 font-medium">$89.99</p>
-          </div>
-        </div>
-      </div>
-      <div className="text-center mt-12">
-        <a
-          href="#"
-          className="inline-block py-3 px-8 border border-gray-300 text-gray-800 font-medium rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap"
-        >
-          View All New Arrivals
-        </a>
-      </div>
-    </div>
-  </section>
+  
   {/* Testimonials */}
   <section className="py-16 bg-gray-50">
     <div className="container mx-auto px-4">
@@ -318,3 +183,126 @@
     </div>
   </section>
   {/* Footer */}
+
+
+  <div class="featured-section px-5 py-16 text-center">
+        <div class="section-header flex justify-between items-center mb-10 animate-fadeInUp" style="animation-delay: 0.5s;">
+            <h2 class="text-3xl font-bold">FEATURED PRODUCTS</h2>
+            <a href="#" class="text-primary font-medium hover:underline">VIEW ALL</a>
+        </div>
+        
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 animate-fadeInUp" style="animation-delay: 0.6s;">
+                <div class="relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1026&q=80" 
+                         alt="Men's Casual Shirt" 
+                         class="w-full h-64 object-cover"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                    <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Casual Linen Shirt</h3>
+                    <div class="flex justify-center items-center mt-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm ml-2">(24)</span>
+                    </div>
+                    <p class="text-primary font-bold text-xl mt-2">$49.99</p>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 animate-fadeInUp" style="animation-delay: 0.7s;">
+                <div class="relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80" 
+                         alt="Women's Summer Dress" 
+                         class="w-full h-64 object-cover"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                    <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Summer Floral Dress</h3>
+                    <div class="flex justify-center items-center mt-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm ml-2">(18)</span>
+                    </div>
+                    <p class="text-primary font-bold text-xl mt-2">$59.99 <span class="text-gray-400 text-sm line-through">$69.99</span></p>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 animate-fadeInUp" style="animation-delay: 0.8s;">
+                <div class="relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80" 
+                         alt="Men's Sneakers" 
+                         class="w-full h-64 object-cover"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                    <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Classic White Sneakers</h3>
+                    <div class="flex justify-center items-center mt-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm ml-2">(32)</span>
+                    </div>
+                    <p class="text-primary font-bold text-xl mt-2">$39.99</p>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 animate-fadeInUp" style="animation-delay: 0.9s;">
+                <div class="relative overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80" 
+                         alt="Women's Handbag" 
+                         class="w-full h-64 object-cover"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
+                    <button class="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-primary text-white px-6 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-red-500">
+                        Add to Cart
+                    </button>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-semibold text-lg">Leather Crossbody Bag</h3>
+                    <div class="flex justify-center items-center mt-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-500 text-sm ml-2">(27)</span>
+                    </div>
+                    <p class="text-primary font-bold text-xl mt-2">$79.99</p>
+                </div>
+            </div>
+        </div>
+    </div>

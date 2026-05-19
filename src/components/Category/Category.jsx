@@ -1,29 +1,23 @@
-import { categoryData } from "../../data/categoriesData";
+import { categoryProductData } from "../../data/productData";
 import { HiArrowRight } from "react-icons/hi2";
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 const Category = () => {
   return (
     <section className="bg-white py-10">
       <div className="container-section">
         {/* SECTION HEADER */}
-        <div className="mb-10 flex flex-col items-center justify-center text-center sm:mb-14">
-          <span className="mb-3 inline-flex rounded-full border border-indigo-100 bg-indigo-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.2em] text-indigo-600">
-            Categories
-          </span>
-
-          <h2 className="max-w-2xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
-            Shop by Category
-          </h2>
-
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-600 sm:text-base">
-            Explore premium collections designed for modern lifestyles, comfort,
-            and timeless everyday fashion.
-          </p>
-        </div>
+        <SectionHeader
+          value={"Categories"}
+          title={"Shop by Category"}
+          description={
+            "Explore premium collections designed for modern lifestyles, comfort, and timeless everyday fashion."
+          }
+        />
 
         {/* CATEGORY GRID */}
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
-          {categoryData?.map((category) => (
+          {categoryProductData?.map((category) => (
             <a
               key={category.id}
               href="#"

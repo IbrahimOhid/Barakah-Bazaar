@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-import { HiArrowRight, HiMiniFire } from "react-icons/hi2";
+import {  HiMiniFire } from "react-icons/hi2";
 
-import SummerImg from "../../../public/image/offer_img/summer.jpg";
+import SummerImg from "/image/product_img/summer.jpg";
+import ExploreButton from "../Button/ExploreButton";
+import ShopButton from "../Button/ShopButton";
 
 const SpecialOffer = () => {
   // SALE END DATE
@@ -89,7 +91,7 @@ const SpecialOffer = () => {
   return (
       <div className="container-section">
         {/* WRAPPER */}
-        <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 shadow-[0_25px_70px_-20px_rgba(15,23,42,0.10)]">
+        <div className="relative overflow-hidden rounded-[28px] border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 ">
           {/* BACKGROUND GLOW */}
           <div className="absolute inset-0 overflow-hidden">
             <div className="absolute -left-16 top-0 h-56 w-56 rounded-full bg-indigo-100 blur-3xl sm:h-72 sm:w-72" />
@@ -132,11 +134,11 @@ const SpecialOffer = () => {
                     key={item.id}
                     className="rounded-2xl border border-slate-200 bg-white/90 p-4 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                   >
-                    <h3 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-[38px]">
+                    <h3 className="text-3xl font-bold tracking-tight text-orange-500 sm:text-[38px]">
                       {item.value}
                     </h3>
 
-                    <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-500 sm:text-xs">
+                    <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-indigo-600 sm:text-xs">
                       {item.label}
                     </p>
                   </div>
@@ -145,14 +147,9 @@ const SpecialOffer = () => {
 
               {/* CTA */}
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <button className="group inline-flex h-12 items-center justify-center gap-2 rounded-2xl bg-indigo-600 px-6 text-sm font-semibold text-white shadow-lg shadow-indigo-200 transition-all duration-300 hover:-translate-y-0.5 hover:bg-indigo-700 active:scale-[0.98]">
-                  Shop the Sale
-                  <HiArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
-
-                <button className="inline-flex h-12 items-center justify-center rounded-2xl border border-slate-300 bg-white px-6 text-sm font-semibold text-slate-700 transition-all duration-300 hover:bg-slate-50 hover:shadow-md active:scale-[0.98]">
-                  Explore Collection
-                </button>
+                
+                <ShopButton value={"Shop Now"}/>
+                <ExploreButton value={"Explore Collection"}/>
               </div>
             </div>
 
@@ -160,11 +157,11 @@ const SpecialOffer = () => {
             <div className="order-1 md:order-2">
               <div className="relative">
                 {/* IMAGE CARD */}
-                <div className="overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-xl">
+                <div className="overflow-hidden rounded-[26px] border border-slate-200 bg-white ">
                   <img
                     src={SummerImg}
                     alt="Summer Sale"
-                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105 md:aspect-[5/5]"
+                    className=" w-full object-cover transition-transform duration-700 hover:scale-105 "
                   />
                 </div>
 
