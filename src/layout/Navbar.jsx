@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { HiOutlineBars3, HiOutlineXMark } from "react-icons/hi2";
 import { RiAccountPinCircleLine } from "react-icons/ri";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -15,12 +15,12 @@ const Navbar = () => {
     {
       id: 1,
       item: "New Arrivals",
-      path: "/new-arrivals",
+      path: "/product",
     },
     {
       id: 2,
       item: "Sale",
-      path: "/sale",
+      path: "/product",
     },
     {
       id: 3,
@@ -37,13 +37,13 @@ const Navbar = () => {
         {/* LEFT SIDE */}
         <div className="flex items-center gap-8 xl:gap-12">
           {/* LOGO */}
-          <a href="#" className="shrink-0">
+          <NavLink to={"/"}  className="shrink-0">
             <img
               src={Logo}
               alt="Logo"
               className="h-8 w-auto object-contain sm:h-9 lg:h-10 xl:h-11"
             />
-          </a>
+          </NavLink>
 
           {/* DESKTOP NAVIGATION */}
           <nav className="hidden lg:flex items-center gap-7 xl:gap-9">
@@ -78,7 +78,7 @@ const Navbar = () => {
               <NavLink
                 key={nav.id}
                 to={nav.path}
-                className="text-sm font-medium text-slate-700 hover:text-indigo-600 transition-colors duration-300"
+                className="relative text-[15px] font-semibold text-slate-700 transition-all duration-200 hover:text-indigo-600"
               >
                 {nav.item}
               </NavLink>

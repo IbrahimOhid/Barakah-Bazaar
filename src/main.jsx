@@ -13,6 +13,7 @@ import Root from "./layout/Root.jsx";
 // PAGES
 import Home from "./page/Home/Home.jsx";
 import About from "./page/About/About.jsx";
+import AllProduct from "./page/AllProduct/AllProduct.jsx";
 
 // ROUTER
 const router = createBrowserRouter([
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      {
+        path: "product",
+        element: <AllProduct/>,
       },
     ],
   },

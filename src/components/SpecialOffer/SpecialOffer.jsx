@@ -13,7 +13,7 @@ const SpecialOffer = () => {
     return new Date(
       now.getFullYear(),
       now.getMonth(),
-      now.getDate() + 365,
+      now.getDate() + 3,
       23,
       59,
       59,

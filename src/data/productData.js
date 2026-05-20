@@ -16,10 +16,13 @@ import AccessoriesImg from "/image/product_img/accessories.jpg";
 import FootwearImg from "/image/product_img/footwear.jpg";
 
 // New Arrival Product
-import SilkScarfImg from "../../public/image/product_img/Silk_Scarf.jpg";
-import HandbagImg from "../../public/image/product_img/Handbag.jpg";
-import SunglassesImg from "../../public/image/product_img/Sunglasses.jpg";
-import JeansImg from "../../public/image/product_img/Jeans.jpg";
+import SilkScarfImg from "/image/product_img/Silk_Scarf.jpg";
+import HandbagImg from "/image/product_img/Handbag.jpg";
+import SunglassesImg from "/image/product_img/Sunglasses.jpg";
+import JeansImg from "/image/product_img/Jeans.jpg";
+
+// product Img
+import SamsungWatchImg from "/image/product_img/Samsung-Galaxy-Watch.jpg";
 
 //offerProductData
 export const offerProductData = [
@@ -173,3 +176,81 @@ export const newArrivalProductData = [
     image:JeansImg,
   },
 ];
+
+
+// product data
+export const productData = [
+  {
+    id: 1,
+    name: "Elegant White Blouse",
+    price: "$49.99",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image: BlouseImg,
+  },
+  {
+    id: 2,
+    name: "Premium Denim Jeans",
+    oldPrice: "$99.99",
+    price: "$79.99",
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: DenimJeansImg,
+  },
+  {
+    id: 3,
+    name: "Classic Leather Jacket",
+    price: "$199.99",
+    image: LeatherJacketImg,
+  },
+  {
+    id: 4,
+    name: "Floral Summer Dress",
+    price: "$59.99",
+    oldPrice: "$79.99",
+    badge: "Sale",
+    badgeColor: "bg-rose-500",
+    image: SummerDressImg,
+  },
+  {
+    id: 5,
+    name: "Luxury Silk Scarf",
+    price: "$39.99",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image: SilkScarfImg,
+  },
+  {
+    id: 6,
+    name: "Designer Leather Handbag",
+    price: "$149.99",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image: HandbagImg,
+  },
+  {
+    id: 7,
+    name: "Premium Sunglasses",
+    price: "$89.99",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image:SunglassesImg,
+  },
+  {
+    id: 8,
+    name: "Jeans Pant",
+    price: "$29.99",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image:JeansImg,
+  },
+  {
+    id: 9,
+    name: "Samsung Galaxy Watch",
+    price: "$19.99",
+    oldPrice: "$29.99",
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image:SamsungWatchImg,
+  },
+]
