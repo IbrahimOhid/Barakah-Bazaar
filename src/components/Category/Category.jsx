@@ -1,6 +1,7 @@
 import { categoryProductData } from "../../data/productData";
 import { HiArrowRight } from "react-icons/hi2";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import { NavLink } from "react-router-dom";
 
 const Category = () => {
   return (
@@ -16,7 +17,7 @@ const Category = () => {
         />
 
         {/* CATEGORY GRID */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+       <NavLink to={"/product"}> <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {categoryProductData?.map((category) => (
             <a
               key={category.id}
@@ -61,7 +62,7 @@ const Category = () => {
               <div className="absolute inset-0 rounded-[28px] ring-1 ring-inset ring-black/5 transition-all duration-300 group-hover:ring-indigo-200" />
             </a>
           ))}
-        </div>
+        </div></NavLink>
       </div>
     </section>
   );

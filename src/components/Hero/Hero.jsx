@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import ExploreButton from "../Button/ExploreButton";
 import ShopButton from "../Button/ShopButton";
 import HeroImg from "/image/hero_img.jpg";
@@ -20,8 +21,8 @@ const Hero = () => {
               Premium quality that lasts.
             </p>
             <div className="flex flex-wrap gap-4">
-              <ShopButton value={"Shop Now"}/>
-              <ExploreButton value={"Explore Collection"}/>
+              <NavLink to={"/product"}><ShopButton value={"Shop Now"}/></NavLink>
+              <NavLink to={"/product"}><ExploreButton value={"Explore Collection"}/></NavLink>
             </div>
           </div>
         </div>
