@@ -27,6 +27,9 @@ import CcameraImg from "/image/product_img/Ccamera.jpg";
 import PremiumWatchImg from "/image/product_img/Premium-watch.jpg";
 import SmartSpeakerImg from "/image/product_img/Smart-Speaker.jpg";
 import HpLaptopImg from "/image/product_img/Hp-Laptop.jpg";
+import HeadphoneImg from "/image/product_img/Single-Port-Headphone.jpg";
+import AppleSpeakerImg from "/image/product_img/Apple-Speaker.jpg";
+import WirelessChargersImg from "/image/product_img/Wireless-Chargers.jpg";
 
 //offerProductData
 export const offerProductData = [
@@ -82,7 +85,7 @@ export const featuresProductData = [
   {
     id: 1,
     name: "Elegant White Blouse",
-    price: "49.99",
+    price: 49.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: BlouseImg,
@@ -90,8 +93,8 @@ export const featuresProductData = [
   {
     id: 2,
     name: "Premium Denim Jeans",
-    oldPrice: "99.99",
-    price: "79.99",
+    oldPrice: 99.99,
+    price: 79.99,
     badge: "Best Seller",
     badgeColor: "bg-amber-500",
     image: DenimJeansImg,
@@ -99,14 +102,14 @@ export const featuresProductData = [
   {
     id: 3,
     name: "Classic Leather Jacket",
-    price: "199.99",
+    price: 199.99,
     image: LeatherJacketImg,
   },
   {
     id: 4,
     name: "Floral Summer Dress",
-    price: "59.99",
-    oldPrice: "79.99",
+    price: 59.99,
+    oldPrice: 79.99,
     badge: "Sale",
     badgeColor: "bg-rose-500",
     image: SummerDressImg,
@@ -114,7 +117,7 @@ export const featuresProductData = [
   {
     id: 5,
     name: "Luxury Silk Scarf",
-    price: "39.99",
+    price: 39.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: SilkScarfImg,
@@ -122,7 +125,7 @@ export const featuresProductData = [
   {
     id: 6,
     name: "Designer Leather Handbag",
-    price: "149.99",
+    price: 149.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: HandbagImg,
@@ -130,18 +133,18 @@ export const featuresProductData = [
   {
     id: 7,
     name: "Premium Sunglasses",
-    price: "89.99",
+    price: 89.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
-    image:SunglassesImg,
+    image: SunglassesImg,
   },
   {
     id: 8,
     name: "Jeans Pant",
-    price: "29.99",
+    price: 29.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
-    image:JeansImg,
+    image: JeansImg,
   },
 ];
 
@@ -150,7 +153,7 @@ export const newArrivalProductData = [
   {
     id: 1,
     name: "Luxury Silk Scarf",
-    price: "39.99",
+    price: 39.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: SilkScarfImg,
@@ -158,7 +161,7 @@ export const newArrivalProductData = [
   {
     id: 2,
     name: "Designer Leather Handbag",
-    price: "149.99",
+    price: 149.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: HandbagImg,
@@ -166,28 +169,83 @@ export const newArrivalProductData = [
   {
     id: 3,
     name: "Premium Sunglasses",
-    price: "89.99",
+    price: 89.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
-    image:SunglassesImg,
+    image: SunglassesImg,
   },
   {
     id: 4,
     name: "Jeans Pant",
-    price: "29.99",
+    price: 29.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
-    image:JeansImg,
+    image: JeansImg,
   },
 ];
 
+// best seller
+export const bestSellerProductData = [
+  {
+    id: 1,
+    name: "Premium Denim Jeans",
+    oldPrice: 99.99,
+    price: 79.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: DenimJeansImg,
+  },
+  {
+    id: 2,
+    name: "Apple Speaker",
+    price: 24.99,
+    oldPrice: 29.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: AppleSpeakerImg,
+  },
+  {
+    id: 3,
+    name: "Samsung Galaxy Watch",
+    price: 19.99,
+    oldPrice: 29.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: SamsungWatchImg,
+  },
+  {
+    id: 4,
+    name: "Premium Watch",
+    price: 15.0,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: PremiumWatchImg,
+  },
+  {
+    id: 5,
+    name: "Wireless Charger",
+    price: 44.99,
+    oldPrice: 49.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: WirelessChargersImg,
+  },
+  {
+    id: 6,
+    name: "Single Port Headphone",
+    price: 31.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: HeadphoneImg,
+  },
+];
 
 // product data
 export const productData = [
   {
     id: 1,
     name: "Elegant White Blouse",
-    price: "49.99",
+    price: 49.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: BlouseImg,
@@ -195,8 +253,8 @@ export const productData = [
   {
     id: 2,
     name: "Premium Denim Jeans",
-    oldPrice: "99.99",
-    price: "79.99",
+    oldPrice: 99.99,
+    price: 79.99,
     badge: "Best Seller",
     badgeColor: "bg-amber-500",
     image: DenimJeansImg,
@@ -204,14 +262,14 @@ export const productData = [
   {
     id: 3,
     name: "Classic Leather Jacket",
-    price: "199.99",
+    price: 199.99,
     image: LeatherJacketImg,
   },
   {
     id: 4,
     name: "Floral Summer Dress",
-    price: "59.99",
-    oldPrice: "79.99",
+    price: 59.99,
+    oldPrice: 79.99,
     badge: "Sale",
     badgeColor: "bg-rose-500",
     image: SummerDressImg,
@@ -219,74 +277,100 @@ export const productData = [
   {
     id: 5,
     name: "Luxury Silk Scarf",
-    price: "39.99",
+    price: 39.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: SilkScarfImg,
   },
   {
     id: 6,
+    name: "Apple Speaker",
+    price: 24.99,
+    oldPrice: 29.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: AppleSpeakerImg,
+  },
+  {
+    id: 7,
     name: "Designer Leather Handbag",
-    price: "149.99",
+    price: 149.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: HandbagImg,
   },
   {
-    id: 7,
-    name: "Premium Sunglasses",
-    price: "89.99",
-    badge: "New",
-    badgeColor: "bg-indigo-600",
-    image:SunglassesImg,
-  },
-  {
     id: 8,
-    name: "Jeans Pant",
-    price: "29.99",
+    name: "Premium Sunglasses",
+    price: 89.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
-    image:JeansImg,
+    image: SunglassesImg,
   },
   {
     id: 9,
-    name: "Samsung Galaxy Watch",
-    price: "19.99",
-    oldPrice: "29.99",
-    badge: "Best Seller",
-    badgeColor: "bg-amber-500",
-    image:SamsungWatchImg,
+    name: "Jeans Pant",
+    price: 29.99,
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image: JeansImg,
   },
-   {
+  {
     id: 10,
-    name: "CC Camera",
-    price: "49.99",
-    badge: "New",
-    badgeColor: "bg-indigo-600",
-    image:CcameraImg,
-  },
-   {
-    id: 11,
-    name: "Premium Watch",
-    price: "15.00",
+    name: "Samsung Galaxy Watch",
+    price: 19.99,
+    oldPrice: 29.99,
     badge: "Best Seller",
     badgeColor: "bg-amber-500",
-    image:PremiumWatchImg,
+    image: SamsungWatchImg,
   },
-   {
+  {
+    id: 11,
+    name: "CC Camera",
+    price: 49.99,
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image: CcameraImg,
+  },
+  {
     id: 12,
-    name: "Smart Speaker",
-    price: "150.00",
-    badge: "New",
-    badgeColor: "bg-indigo-600",
-    image:SmartSpeakerImg,
+    name: "Premium Watch",
+    price: 15.0,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: PremiumWatchImg,
   },
-   {
+  {
     id: 13,
-    name: "Hp-Laptop",
-    price: "550.00",
+    name: "Wireless Charger",
+    price: 44.99,
+    oldPrice: 49.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: WirelessChargersImg,
+  },
+  {
+    id: 14,
+    name: "Smart Speaker",
+    price: 150.0,
     badge: "New",
     badgeColor: "bg-indigo-600",
-    image:HpLaptopImg,
+    image: SmartSpeakerImg,
   },
-]
+  {
+    id: 15,
+    name: "HP Laptop",
+    price: 550.0,
+    badge: "New",
+    badgeColor: "bg-indigo-600",
+    image: HpLaptopImg,
+  },
+  {
+    id: 16,
+    name: "Single Port Headphone",
+    price: 31.99,
+    badge: "Best Seller",
+    badgeColor: "bg-amber-500",
+    image: HeadphoneImg,
+  },
+];

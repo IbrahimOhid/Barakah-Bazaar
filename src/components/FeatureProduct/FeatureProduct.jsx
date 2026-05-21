@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import {
+  bestSellerProductData,
   featuresProductData,
   newArrivalProductData,
 } from "../../data/productData";
@@ -21,7 +22,7 @@ const FeatureProduct = () => {
       ? featuresProductData
       : activeTab === "New Arrivals"
         ? newArrivalProductData
-        : featuresProductData;
+        : bestSellerProductData;
 
   return (
     <div className="container-section">

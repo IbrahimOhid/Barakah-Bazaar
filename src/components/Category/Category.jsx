@@ -19,9 +19,8 @@ const Category = () => {
         {/* CATEGORY GRID */}
        <NavLink to={"/product"}> <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
           {categoryProductData?.map((category) => (
-            <a
+            <div
               key={category.id}
-              href="#"
               className="group relative overflow-hidden rounded-[28px] bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-2xl hover:shadow-slate-200/70"
             >
               {/* IMAGE WRAPPER */}
@@ -60,7 +59,7 @@ const Category = () => {
 
               {/* HOVER BORDER */}
               <div className="absolute inset-0 rounded-[28px] ring-1 ring-inset ring-black/5 transition-all duration-300 group-hover:ring-indigo-200" />
-            </a>
+            </div>
           ))}
         </div></NavLink>
       </div>
