@@ -1,28 +1,24 @@
 import { useState } from "react";
 
-import {
-  bestSellerProductData,
-  featuresProductData,
-  newArrivalProductData,
-} from "../../data/productData";
-
 import Button from "../Button/Button";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import ProductCard from "../ProductCard/ProductCard";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const tabs = ["All", "New Arrivals", "Best Sellers"];
 
 const FeatureProduct = () => {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("New Arrivals");
+  const products = useSelector((state) => state.products.products);
 
   // FILTER PRODUCTS
   const filteredProducts =
-    activeTab === "All"
-      ? featuresProductData
-      : activeTab === "New Arrivals"
-        ? newArrivalProductData
-        : bestSellerProductData;
+    activeTab === "New Arrivals"
+      ? products.filter((product) => product.badge === "New")
+      : activeTab === "All"
+        ? products
+        : products.filter((product) => product.badge === "Best Seller");
 
   return (
     <div className="container-section">
@@ -59,7 +55,9 @@ const FeatureProduct = () => {
 
       {/* CTA */}
       <div className="mt-10 flex justify-center sm:mt-14">
-        <NavLink to={"/product"}><Button value={"View All Products"} /></NavLink>
+        <NavLink to={"/product"}>
+          <Button value={"View All Products"} />
+        </NavLink>
       </div>
     </div>
   );

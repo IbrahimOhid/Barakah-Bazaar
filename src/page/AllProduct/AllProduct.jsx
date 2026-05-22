@@ -1,6 +1,5 @@
 
 import ProductCard from '../../components/ProductCard/ProductCard'
-import { productData } from '../../data/productData'
 import { useSelector } from 'react-redux'
 
 const AllProduct = () => {

@@ -1,12 +1,14 @@
 import React from "react";
 
-import { newArrivalProductData } from "../../data/productData";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import Button from "../Button/Button";
 import ProductCard from "../ProductCard/ProductCard";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+
 
 const NewArrival = () => {
+  const products = useSelector((state)=> state.products.products);
   return (
     <div className="container-section">
       {/* SECTION HEADER */}
@@ -19,7 +21,7 @@ const NewArrival = () => {
       />
 
       {/* PRODUCT GRID */}
-      <ProductCard products={newArrivalProductData}/>
+      <ProductCard products={products}/>
 
       {/* CTA */}
       <div className="mt-10 flex justify-center sm:mt-14">

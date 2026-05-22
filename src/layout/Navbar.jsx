@@ -13,15 +13,22 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import { navItem, shopItem } from "../data/navbarData";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  // mobile view
   const [mobileMenu, setMobileMenu] = useState(false);
   const [shopMenu, setShopMenu] = useState(false);
 
+  // nav Link Style
   const navLinkStyle = ({ isActive }) =>
     `relative text-[15px] font-semibold transition-all duration-300 ${
       isActive ? "text-indigo-600" : "text-slate-700 hover:text-indigo-600"
     }`;
+
+    // add to cart redux
+    const carts = useSelector((state)=> state.products.cart);
+
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/70 bg-white backdrop-blur-xl">
@@ -104,7 +111,7 @@ const Navbar = () => {
 
               {btn.badge && (
                 <span className="absolute -right-1 -top-1 flex h-5 min-w-[20px] items-center justify-center rounded-full bg-indigo-600 px-1 text-[10px] font-bold text-white shadow-sm">
-                  3
+                  {carts.length}
                 </span>
               )}
             </button>
