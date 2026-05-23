@@ -9,16 +9,16 @@ import { useSelector } from "react-redux";
 const tabs = ["All", "New Arrivals", "Best Sellers"];
 
 const FeatureProduct = () => {
-  const [activeTab, setActiveTab] = useState("New Arrivals");
+  const [activeTab, setActiveTab] = useState("Best Sellers");
   const products = useSelector((state) => state.products.products);
 
   // FILTER PRODUCTS
   const filteredProducts =
-    activeTab === "New Arrivals"
-      ? products.filter((product) => product.badge === "New")
+    activeTab === "Best Sellers"
+      ? products.filter((product) => product.badge === "Best Seller")
       : activeTab === "All"
         ? products
-        : products.filter((product) => product.badge === "Best Seller");
+        : products.filter((product) => product.badge === "New");
 
   return (
     <div className="container-section">

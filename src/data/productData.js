@@ -86,8 +86,8 @@ export const productData = [
     id: 1,
     name: "Elegant White Blouse",
     price: 49.99,
-    badge: "New",
-    badgeColor: "bg-indigo-600",
+    badge: "Sale",
+    badgeColor: "bg-rose-500",
     image: BlouseImg,
   },
   {
@@ -151,8 +151,8 @@ export const productData = [
     id: 9,
     name: "Jeans Pant",
     price: 29.99,
-    badge: "New",
-    badgeColor: "bg-indigo-600",
+    badge: "Sale",
+    badgeColor: "bg-rose-500",
     image: JeansImg,
   },
   {
@@ -185,8 +185,8 @@ export const productData = [
     name: "Wireless Charger",
     price: 44.99,
     oldPrice: 49.99,
-    badge: "Best Seller",
-    badgeColor: "bg-amber-500",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
     image: WirelessChargersImg,
   },
   {
@@ -209,8 +209,8 @@ export const productData = [
     id: 16,
     name: "Single Port Headphone",
     price: 31.99,
-    badge: "Best Seller",
-    badgeColor: "bg-amber-500",
+    badge: "New",
+    badgeColor: "bg-indigo-600",
     image: HeadphoneImg,
   },
 ];
