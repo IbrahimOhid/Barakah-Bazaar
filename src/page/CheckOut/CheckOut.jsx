@@ -1,18 +1,24 @@
 import { useDispatch, useSelector } from "react-redux";
-import { decrementItem, incrementItem, removeItem } from "../../redux/AddToCart/addToCartSlice";
-
+import {
+  decrementItem,
+  incrementItem,
+  removeItem,
+} from "../../redux/AddToCart/addToCartSlice";
 
 const CheckOut = () => {
   const dispatch = useDispatch();
   const carts = useSelector((state) => state.products.cart);
 
+
   // TOTAL CALCULATION
-  const subtotal = carts.reduce(
-    (total, product) => total + product.price * product.quantity,
-    0,
-  );
-  const tax = subtotal * 0.02;
-  const total = subtotal + tax;
+const subtotal = carts.reduce(
+  (total, product) =>
+    total + Number(product.price) * product.quantity,
+  0
+);
+
+const tax = subtotal * 0.02;
+const total = subtotal + tax;
 
   return (
     <section className="bg-slate-50/40 py-8 sm:py-10 lg:py-14">
@@ -48,7 +54,7 @@ const CheckOut = () => {
                     >
                       {/* PRODUCT INFO */}
                       <div className="flex gap-4 sm:gap-5">
-                        <div className="flex h-24 w-24 sm:h-28 sm:w-28 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+                        <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 sm:h-28 sm:w-28">
                           <img
                             src={product.image}
                             alt={product.name}
@@ -61,29 +67,32 @@ const CheckOut = () => {
                             <h3 className="line-clamp-2 text-sm font-semibold text-slate-900 sm:text-base">
                               {product.name}
                             </h3>
+
                             <p className="mt-1 text-sm text-slate-500">
                               Price: ${product.price}
                             </p>
                           </div>
 
                           {/* QUANTITY CONTROL */}
-                          <div className="mt-4 inline-flex items-center w-32 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+                          <div className="mt-4 inline-flex h-11 w-32 items-center overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
                             <button
                               onClick={() =>
                                 dispatch(decrementItem(product.id))
                               }
-                              className="flex h-10 w-10 sm:h-11 sm:w-11 items-center cursor-pointer justify-center border-r border-slate-200 text-lg sm:text-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-indigo-600 active:scale-95"
+                              className="flex h-full w-11 items-center justify-center border-r border-slate-200 text-xl font-medium text-slate-600 transition-all duration-200 hover:bg-slate-100 hover:text-indigo-600 active:scale-95"
                             >
                               −
                             </button>
-                            <span className="flex h-10 sm:h-11 min-w-[48px] sm:min-w-[52px] items-center justify-center bg-slate-50 px-2 sm:px-3 text-sm sm:text-base font-semibold text-slate-900">
+
+                            <span className="flex h-full min-w-[52px] items-center justify-center bg-slate-50 px-3 text-sm font-semibold text-slate-900">
                               {product.quantity}
                             </span>
+
                             <button
                               onClick={() =>
                                 dispatch(incrementItem(product.id))
                               }
-                              className="flex h-10 w-10 sm:h-11 sm:w-11 items-center cursor-pointer justify-center border-l border-slate-200 text-lg sm:text-xl font-medium text-slate-600 hover:bg-slate-100 hover:text-indigo-600 active:scale-95"
+                              className="flex h-full w-11 items-center justify-center border-l border-slate-200 text-xl font-medium text-slate-600 transition-all duration-200 hover:bg-slate-100 hover:text-indigo-600 active:scale-95"
                             >
                               +
                             </button>
@@ -96,6 +105,7 @@ const CheckOut = () => {
                         <span className="text-sm font-medium text-slate-500 md:hidden">
                           Subtotal:
                         </span>
+
                         <p className="text-base font-bold text-slate-900 md:text-center">
                           ${(product.price * product.quantity).toFixed(2)}
                         </p>
@@ -105,7 +115,7 @@ const CheckOut = () => {
                       <div className="flex justify-end md:justify-center">
                         <button
                           onClick={() => dispatch(removeItem(product.id))}
-                          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-red-100 bg-red-50 text-red-500 hover:bg-red-100 transition-all duration-300"
+                          className="flex h-11 w-11 items-center justify-center cursor-pointer rounded-2xl border border-red-100 bg-red-50 text-lg font-semibold text-red-500 transition-all duration-300 hover:-translate-y-0.5 hover:bg-red-100 active:scale-95"
                         >
                           ×
                         </button>
@@ -115,9 +125,15 @@ const CheckOut = () => {
                 </div>
               </>
             ) : (
-              <p className="p-6 text-center text-2xl text-red-500 bg-red-50 h-full">
-                Your Cart is Empty!
-              </p>
+              <div className="flex flex-col items-center justify-center px-6 py-20 text-center">
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Your cart is empty
+                </h2>
+
+                <p className="mt-2 text-sm text-slate-500">
+                  Add some products to continue shopping.
+                </p>
+              </div>
             )}
           </div>
 

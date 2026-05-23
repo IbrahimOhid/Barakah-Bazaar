@@ -11,9 +11,8 @@ export const addToCartReducer = createSlice({
   reducers: {
     addToCart: (state, action) => {
       const existingProduct = state.cart.find(
-        (product) => product.id === action.payload.id
+        (product) => product.id === action.payload.id,
       );
-
       if (existingProduct) {
         toast.error("Product already in cart!");
       } else {
@@ -24,25 +23,28 @@ export const addToCartReducer = createSlice({
 
     incrementItem: (state, action) => {
       const item = state.cart.find((product) => product.id === action.payload);
-       if (!item) return;
+
       if (item.quantity >= 5) {
-        toast.warning("Only 5 products allowed"); 
+        toast.warning("Only 5 products allowed");
+      } else {
         item.quantity += 1;
       }
     },
 
     decrementItem: (state, action) => {
       const item = state.cart.find((product) => product.id === action.payload);
-       if (!item) return;
+
       if (item.quantity > 1) {
         item.quantity -= 1;
       }
     },
 
     removeItem: (state, action) => {
-      state.cart = state.cart.filter((product) => product.id !== action.payload);
-      
-      toast.info("Item removed from cart"); 
+      state.cart = state.cart.filter(
+        (product) => product.id !== action.payload,
+      );
+
+      toast.info("Item removed from cart");
     },
   },
 });
