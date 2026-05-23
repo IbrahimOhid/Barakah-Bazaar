@@ -15,6 +15,8 @@ import Root from "./layout/Root.jsx";
 import Home from "./page/Home/Home.jsx";
 import About from "./page/About/About.jsx";
 import AllProduct from "./page/AllProduct/AllProduct.jsx";
+import CheckOut from "./page/CheckOut/CheckOut.jsx";
+import { ToastContainer, Bounce } from "react-toastify";
 
 
 // ROUTER
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
         path: "product",
         element: <AllProduct/>,
       },
+      {
+        path: "checkout",
+        element: <CheckOut/>
+      }
     ],
   },
 ]);
@@ -42,6 +48,19 @@ const router = createBrowserRouter([
 // RENDER
 createRoot(document.getElementById("root")).render(
   <Provider store={store}>
+    <ToastContainer
+        position="top-center"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     <RouterProvider router={router} />
   </Provider>
 );

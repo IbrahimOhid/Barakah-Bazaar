@@ -9,6 +9,9 @@ import { useSelector } from "react-redux";
 
 const NewArrival = () => {
   const products = useSelector((state)=> state.products.products);
+
+  const filteredProducts = products.filter((product)=> product.badge === "New");
+
   return (
     <div className="container-section">
       {/* SECTION HEADER */}
@@ -21,7 +24,7 @@ const NewArrival = () => {
       />
 
       {/* PRODUCT GRID */}
-      <ProductCard products={products}/>
+      <ProductCard products={filteredProducts}/>
 
       {/* CTA */}
       <div className="mt-10 flex justify-center sm:mt-14">

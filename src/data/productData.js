@@ -142,7 +142,7 @@ export const productData = [
   {
     id: 8,
     name: "Premium Sunglasses",
-    price: 89.99,
+    price: 29.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: SunglassesImg,
@@ -192,7 +192,7 @@ export const productData = [
   {
     id: 14,
     name: "Smart Speaker",
-    price: 150.0,
+    price: 99.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: SmartSpeakerImg,
@@ -200,7 +200,7 @@ export const productData = [
   {
     id: 15,
     name: "HP Laptop",
-    price: 550.0,
+    price: 550.99,
     badge: "New",
     badgeColor: "bg-indigo-600",
     image: HpLaptopImg,

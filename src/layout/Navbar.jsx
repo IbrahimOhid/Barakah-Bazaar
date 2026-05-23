@@ -103,9 +103,9 @@ const Navbar = () => {
               icon: <RiAccountPinCircleLine className="h-5 w-5" />,
             },
           ].map((btn, index) => (
-            <button
+            <NavLink to={"/checkout"}
               key={index}
-              className="relative flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 hover:shadow-lg hover:shadow-indigo-100 active:scale-95"
+              className="relative flex h-11 w-11 items-center cursor-pointer justify-center rounded-2xl border border-slate-200 bg-white text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-600 hover:shadow-lg hover:shadow-indigo-100 active:scale-95"
             >
               {btn.icon}
 
@@ -114,7 +114,7 @@ const Navbar = () => {
                   {carts.length}
                 </span>
               )}
-            </button>
+            </NavLink>
           ))}
 
           {/* MOBILE MENU BUTTON */}
